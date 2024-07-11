@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUI_Perf_Test.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid RowDefinitions="auto, *">
+        <VerticalStackLayout>
+            <Button
+                Padding="10"
+                Clicked="Button_Clicked"
+                Text="Generate Grid" />
+            <Label x:Name="elapsedMsText" Text="Took: 0ms" />
+            <HorizontalStackLayout>
+                <Label Text="Nodes Deep" />
+                <Entry x:Name="numNodes" Text="100" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Grid x:Name="parentGrid" Grid.Row="1" />
+    </Grid>
+
+</ContentPage>
